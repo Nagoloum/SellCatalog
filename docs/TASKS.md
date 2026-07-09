@@ -30,18 +30,18 @@
 
 ## 4. Session et navigation
 
-- [ ] Verifier la session au demarrage de l'application.
-- [ ] Rediriger automatiquement vers la liste si l'utilisateur est connecte.
-- [ ] Nettoyer la session a la deconnexion.
-- [ ] Revenir proprement vers l'ecran login.
+- [x] Verifier la session au demarrage de l'application.
+- [x] Rediriger automatiquement vers la liste si l'utilisateur est connecte.
+- [x] Nettoyer la session a la deconnexion.
+- [x] Revenir proprement vers l'ecran login.
 
 ## 5. Liste des produits
 
-- [ ] Charger les produits avec `GET /api/produits`.
-- [ ] Afficher image, titre, categorie et prix.
-- [ ] Ajouter les etats chargement, erreur et liste vide.
-- [ ] Afficher le prenom de l'utilisateur connecte.
-- [ ] Naviguer vers le detail au tap.
+- [x] Charger les produits avec `GET /api/produits`.
+- [x] Afficher image, titre, categorie et prix.
+- [x] Ajouter les etats chargement, erreur et liste vide.
+- [x] Afficher le prenom de l'utilisateur connecte.
+- [x] Naviguer vers le detail au tap.
 
 ## 6. Detail produit
 

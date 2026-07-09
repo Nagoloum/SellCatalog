@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'screens/login_screen.dart';
 import 'screens/product_detail_screen.dart';
 import 'screens/products_screen.dart';
+import 'screens/session_gate_screen.dart';
 
 const Color _brandRed = Color(0xFFC62828);
 const Color _brandRedDark = Color(0xFF8E1B1B);
@@ -21,8 +22,9 @@ class SellCatalogApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'SellCatalog',
       theme: _buildTheme(),
-      initialRoute: LoginScreen.routeName,
+      initialRoute: SessionGateScreen.routeName,
       routes: {
+        SessionGateScreen.routeName: (_) => const SessionGateScreen(),
         LoginScreen.routeName: (_) => const LoginScreen(),
         ProductsScreen.routeName: (_) => const ProductsScreen(),
         ProductDetailScreen.routeName: (_) => const ProductDetailScreen(),
