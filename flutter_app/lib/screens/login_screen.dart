@@ -8,7 +8,7 @@ class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
 
   static const String routeName = '/login';
-  static const String _backgroundImage = 'assets/images/logobackground.jpg';
+  static const String _backgroundImage = 'assets/images/backgoundimg.jpg';
   static const String _logoImage = 'assets/images/logo.png';
 
   @override
@@ -81,7 +81,7 @@ class _LoginScreenState extends State<LoginScreen> {
         children: [
           Image.asset(LoginScreen._backgroundImage, fit: BoxFit.cover),
           const DecoratedBox(
-            decoration: BoxDecoration(color: Color.fromARGB(120, 0, 0, 0)),
+            decoration: BoxDecoration(color: Color.fromARGB(36, 0, 0, 0)),
           ),
           SafeArea(
             child: SingleChildScrollView(
@@ -111,7 +111,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 'SellCatalog',
                                 style: Theme.of(context).textTheme.headlineLarge
                                     ?.copyWith(
-                                      color: Colors.white,
+                                      color: const Color.fromARGB(255, 0, 0, 0),
                                       fontWeight: FontWeight.w700,
                                     ),
                                 overflow: TextOverflow.ellipsis,
@@ -124,7 +124,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           'Connexion',
                           style: Theme.of(context).textTheme.headlineLarge
                               ?.copyWith(
-                                color: Colors.white,
+                                color: const Color.fromARGB(255, 0, 0, 0),
                                 fontWeight: FontWeight.w700,
                               ),
                           textAlign: TextAlign.center,

@@ -10,7 +10,7 @@ class ApiService {
 
   // Android emulator: http://10.0.2.2:5000
   // Desktop/web or iOS simulator: http://localhost:5000
-  static const String baseUrl = 'http://10.0.2.2:5000';
+  static const String baseUrl = 'http://localhost:5000';
 
   final http.Client _client;
 
