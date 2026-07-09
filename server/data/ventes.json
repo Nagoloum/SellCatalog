@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "image": "https://picsum.photos/seed/sac1/600/600",
+    "titre": "Sac a main cuir premium",
+    "description": "Sac en cuir veritable, fabrication artisanale, edition privee.",
+    "categorie": "Mode",
+    "prix": 89.9
+  },
+  {
+    "id": 2,
+    "image": "https://picsum.photos/seed/casque2/600/600",
+    "titre": "Casque audio sans fil",
+    "description": "Reduction de bruit active, autonomie 30h, charge rapide USB-C.",
+    "categorie": "High-Tech",
+    "prix": 59.0
+  },
+  {
+    "id": 3,
+    "image": "https://picsum.photos/seed/lampe3/600/600",
+    "titre": "Lampe design minimaliste",
+    "description": "Lampe de table LED avec intensite reglable et base en metal.",
+    "categorie": "Maison",
+    "prix": 39.5
+  }
+]
