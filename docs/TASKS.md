@@ -22,11 +22,11 @@
 
 ## 3. Connexion Flutter
 
-- [ ] Transformer l'ecran login en formulaire valide.
-- [ ] Appeler `POST /api/login` depuis `ApiService`.
-- [ ] Afficher le chargement pendant l'appel reseau.
-- [ ] Afficher les erreurs d'identifiants ou reseau.
-- [ ] Sauvegarder l'utilisateur avec `SessionService`.
+- [x] Transformer l'ecran login en formulaire valide.
+- [x] Appeler `POST /api/login` depuis `ApiService`.
+- [x] Afficher le chargement pendant l'appel reseau.
+- [x] Afficher les erreurs d'identifiants ou reseau.
+- [x] Sauvegarder l'utilisateur avec `SessionService`.
 
 ## 4. Session et navigation
 
