@@ -6,6 +6,7 @@
 - [x] Initialiser le projet Flutter.
 - [x] Ajouter les dependances Flutter `http` et `shared_preferences`.
 - [x] Activer Material 3 avec `useMaterial3: true`.
+- [x] Configurer la police Poppins et le theme rouge/blanc.
 - [x] Creer les dossiers Flutter `models/`, `services/`, `screens/`.
 - [x] Creer le backend Python Flask de base.
 - [x] Ajouter des donnees JSON de depart.
