@@ -3,7 +3,7 @@
     "id": 1,
     "image": "https://picsum.photos/seed/sac1/600/600",
     "titre": "Sac a main cuir premium",
-    "description": "Sac en cuir veritable, fabrication artisanale, edition privee.",
+    "description": "Sac en cuir veritable avec finitions soignees, compartiment interieur zippe et bandouliere ajustable.",
     "categorie": "Mode",
     "prix": 89.9
   },
@@ -11,7 +11,7 @@
     "id": 2,
     "image": "https://picsum.photos/seed/casque2/600/600",
     "titre": "Casque audio sans fil",
-    "description": "Reduction de bruit active, autonomie 30h, charge rapide USB-C.",
+    "description": "Casque Bluetooth avec reduction de bruit active, autonomie de 30 heures et charge rapide USB-C.",
     "categorie": "High-Tech",
     "prix": 59.0
   },
@@ -19,8 +19,64 @@
     "id": 3,
     "image": "https://picsum.photos/seed/lampe3/600/600",
     "titre": "Lampe design minimaliste",
-    "description": "Lampe de table LED avec intensite reglable et base en metal.",
+    "description": "Lampe de table LED avec trois niveaux d'intensite, base en metal et lumiere chaude.",
     "categorie": "Maison",
     "prix": 39.5
+  },
+  {
+    "id": 4,
+    "image": "https://picsum.photos/seed/montre4/600/600",
+    "titre": "Montre connectee sport",
+    "description": "Montre connectee avec suivi cardio, notifications, modes sportifs et resistance aux eclaboussures.",
+    "categorie": "High-Tech",
+    "prix": 79.99
+  },
+  {
+    "id": 5,
+    "image": "https://picsum.photos/seed/veste5/600/600",
+    "titre": "Veste mi-saison elegante",
+    "description": "Veste legere pour homme ou femme, coupe moderne, doublure confortable et poches discretes.",
+    "categorie": "Mode",
+    "prix": 64.9
+  },
+  {
+    "id": 6,
+    "image": "https://picsum.photos/seed/cafe6/600/600",
+    "titre": "Machine a cafe compacte",
+    "description": "Machine a cafe automatique compacte, ideale pour espresso, lungo et boissons du matin.",
+    "categorie": "Maison",
+    "prix": 119.0
+  },
+  {
+    "id": 7,
+    "image": "https://picsum.photos/seed/tapis7/600/600",
+    "titre": "Tapis graphique salon",
+    "description": "Tapis doux a motifs geometriques, parfait pour rechauffer un salon ou une chambre.",
+    "categorie": "Maison",
+    "prix": 49.9
+  },
+  {
+    "id": 8,
+    "image": "https://picsum.photos/seed/baskets8/600/600",
+    "titre": "Baskets urbaines legeres",
+    "description": "Baskets respirantes avec semelle amortissante, adaptees aux sorties quotidiennes.",
+    "categorie": "Mode",
+    "prix": 54.5
+  },
+  {
+    "id": 9,
+    "image": "https://picsum.photos/seed/tablette9/600/600",
+    "titre": "Tablette 10 pouces",
+    "description": "Tablette tactile 10 pouces avec 64 Go de stockage, ecran lumineux et autonomie longue duree.",
+    "categorie": "High-Tech",
+    "prix": 149.9
+  },
+  {
+    "id": 10,
+    "image": "https://picsum.photos/seed/valise10/600/600",
+    "titre": "Valise cabine rigide",
+    "description": "Valise cabine a coque rigide, roues multidirectionnelles et serrure a combinaison integree.",
+    "categorie": "Voyage",
+    "prix": 74.9
   }
 ]
