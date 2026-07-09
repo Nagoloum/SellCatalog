@@ -34,6 +34,68 @@ python server.py
 
 API disponible sur `http://localhost:5000`.
 
+## Identifiants de test
+
+```text
+Email: sophie.martin@example.com
+Mot de passe: azerty123
+
+Email: karim.benali@example.com
+Mot de passe: motdepasse2
+```
+
+## API backend
+
+### POST `/api/login`
+
+Connecte un utilisateur avec son email et son mot de passe.
+
+Requete :
+
+```json
+{
+  "email": "sophie.martin@example.com",
+  "password": "azerty123"
+}
+```
+
+Reponse `200` :
+
+```json
+{
+  "id": 1,
+  "email": "sophie.martin@example.com",
+  "nom": "Martin",
+  "prenom": "Sophie"
+}
+```
+
+Le mot de passe n'est jamais renvoye par cette route.
+
+Reponse `401` :
+
+```json
+{
+  "message": "Identifiants invalides"
+}
+```
+
+### GET `/api/produits`
+
+Renvoie la liste complete des produits.
+
+### GET `/api/produits/<id>`
+
+Renvoie le detail d'un produit.
+
+Reponse `404` si le produit n'existe pas :
+
+```json
+{
+  "message": "Produit introuvable"
+}
+```
+
 ## Lancer Flutter
 
 ```powershell

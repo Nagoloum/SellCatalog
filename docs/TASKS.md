@@ -13,11 +13,11 @@
 
 ## 2. Backend Python complet
 
-- [ ] Completer `ventes.json` avec au moins 10 produits et 3 categories.
-- [ ] Verifier que `POST /api/login` ne renvoie jamais le mot de passe.
-- [ ] Tester `GET /api/produits`.
-- [ ] Tester `GET /api/produits/<id>`.
-- [ ] Documenter les endpoints dans le README.
+- [x] Completer `ventes.json` avec au moins 10 produits et 3 categories.
+- [x] Verifier que `POST /api/login` ne renvoie jamais le mot de passe.
+- [x] Tester `GET /api/produits`.
+- [x] Tester `GET /api/produits/<id>`.
+- [x] Documenter les endpoints dans le README.
 
 ## 3. Connexion Flutter
 
