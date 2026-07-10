@@ -12,5 +12,12 @@
     "password": "motdepasse2",
     "nom": "Benali",
     "prenom": "Karim"
+  },
+  {
+    "id": 3,
+    "email": "danielnagoloum@gmail.com",
+    "password": "Dani.2000",
+    "nom": "nago",
+    "prenom": "daniel"
   }
 ]
