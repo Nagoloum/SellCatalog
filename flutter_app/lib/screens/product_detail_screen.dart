@@ -1,25 +1,82 @@
 import 'package:flutter/material.dart';
 
 import '../models/product.dart';
+import '../services/favorites_service.dart';
 
-class ProductDetailScreen extends StatelessWidget {
+class ProductDetailScreen extends StatefulWidget {
   const ProductDetailScreen({super.key});
 
   static const String routeName = '/product-detail';
 
   @override
-  Widget build(BuildContext context) {
-    final arguments = ModalRoute.of(context)?.settings.arguments;
+  State<ProductDetailScreen> createState() => _ProductDetailScreenState();
+}
 
-    if (arguments is! Product) {
+class _ProductDetailScreenState extends State<ProductDetailScreen> {
+  final _favoritesService = FavoritesService();
+
+  int? _loadedProductId;
+  bool _isFavorite = false;
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+
+    final product = _productFromRoute(context);
+    if (product != null && product.id != _loadedProductId) {
+      _loadedProductId = product.id;
+      _loadFavorite(product.id);
+    }
+  }
+
+  Future<void> _loadFavorite(int productId) async {
+    final isFavorite = await _favoritesService.isFavorite(productId);
+
+    if (mounted) {
+      setState(() {
+        _isFavorite = isFavorite;
+      });
+    }
+  }
+
+  Future<void> _toggleFavorite(int productId) async {
+    final favoriteIds = await _favoritesService.toggleFavorite(productId);
+
+    if (mounted) {
+      setState(() {
+        _isFavorite = favoriteIds.contains(productId);
+      });
+    }
+  }
+
+  Product? _productFromRoute(BuildContext context) {
+    final arguments = ModalRoute.of(context)?.settings.arguments;
+    return arguments is Product ? arguments : null;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final product = _productFromRoute(context);
+
+    if (product == null) {
       return const _MissingProductDetail();
     }
 
-    final product = arguments;
     final colorScheme = Theme.of(context).colorScheme;
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Detail produit')),
+      appBar: AppBar(
+        title: const Text('Detail produit'),
+        actions: [
+          IconButton(
+            tooltip: _isFavorite
+                ? 'Retirer des favoris'
+                : 'Ajouter aux favoris',
+            onPressed: () => _toggleFavorite(product.id),
+            icon: Icon(_isFavorite ? Icons.favorite : Icons.favorite_border),
+          ),
+        ],
+      ),
       body: SafeArea(
         child: SingleChildScrollView(
           padding: const EdgeInsets.all(24),

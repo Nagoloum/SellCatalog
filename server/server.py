@@ -19,6 +19,16 @@ def load_json(filename: str) -> list[dict]:
         return json.load(file)
 
 
+def save_json(filename: str, data: list[dict]) -> None:
+    with (DATA_DIR / filename).open("w", encoding="utf-8") as file:
+        json.dump(data, file, ensure_ascii=False, indent=2)
+        file.write("\n")
+
+
+def public_user(user: dict) -> dict:
+    return {key: value for key, value in user.items() if key != "password"}
+
+
 @app.post("/api/login")
 def login():
     payload = request.get_json(silent=True) or {}
@@ -39,10 +49,39 @@ def login():
     if user is None:
         return jsonify({"message": "Identifiants invalides"}), 401
 
-    user_without_password = {
-        key: value for key, value in user.items() if key != "password"
+    return jsonify(public_user(user))
+
+
+@app.post("/api/register")
+def register():
+    payload = request.get_json(silent=True) or {}
+    email = payload.get("email", "").strip().lower()
+    password = payload.get("password", "")
+    nom = payload.get("nom", "").strip()
+    prenom = payload.get("prenom", "").strip()
+
+    if not email or not password or not nom or not prenom:
+        return jsonify({"message": "Tous les champs sont obligatoires"}), 400
+
+    users = load_json("users.json")
+    email_exists = any(user["email"].lower() == email for user in users)
+
+    if email_exists:
+        return jsonify({"message": "Cet email est deja utilise"}), 409
+
+    next_id = max((user["id"] for user in users), default=0) + 1
+    user = {
+        "id": next_id,
+        "email": email,
+        "password": password,
+        "nom": nom,
+        "prenom": prenom,
     }
-    return jsonify(user_without_password)
+
+    users.append(user)
+    save_json("users.json", users)
+
+    return jsonify(public_user(user)), 201
 
 
 @app.get("/api/produits")
