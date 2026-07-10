@@ -104,6 +104,28 @@ flutter pub get
 flutter run
 ```
 
-Pour un emulateur Android, l'application utilise `http://10.0.2.2:5000`.
-Pour Windows, web ou iOS simulator, il faudra remplacer `baseUrl` dans
-`flutter_app/lib/services/api_service.dart` par `http://localhost:5000`.
+Par defaut, l'application utilise `http://localhost:5000` dans
+`flutter_app/lib/services/api_service.dart`, ce qui convient pour Windows,
+web et iOS simulator.
+
+Pour un emulateur Android, remplacez temporairement `baseUrl` par :
+
+```dart
+static const String baseUrl = 'http://10.0.2.2:5000';
+```
+
+## Verification rapide
+
+```powershell
+cd flutter_app
+flutter analyze
+flutter test
+```
+
+Le serveur a ete teste localement sur `http://localhost:5000` avec :
+
+- login valide
+- login invalide en `401`
+- liste des produits
+- detail produit
+- produit introuvable en `404`

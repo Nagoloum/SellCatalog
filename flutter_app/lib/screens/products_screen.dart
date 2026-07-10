@@ -199,7 +199,7 @@ class _ProductListItem extends StatelessWidget {
                     ),
                     const SizedBox(height: 8),
                     Text(
-                      _formatPrice(product.prix),
+                      product.formattedPrice,
                       style: Theme.of(context).textTheme.titleMedium?.copyWith(
                         color: colorScheme.primary,
                         fontWeight: FontWeight.w700,
@@ -215,10 +215,6 @@ class _ProductListItem extends StatelessWidget {
         ),
       ),
     );
-  }
-
-  String _formatPrice(double price) {
-    return '${price.toStringAsFixed(2).replaceAll('.', ',')} EUR';
   }
 }
 
