@@ -31,6 +31,31 @@ class ApiService {
     return AppUser.fromJson(jsonDecode(response.body) as Map<String, dynamic>);
   }
 
+  Future<AppUser> register({
+    required String prenom,
+    required String nom,
+    required String email,
+    required String password,
+  }) async {
+    final response = await _client.post(
+      Uri.parse('$baseUrl/api/register'),
+      headers: {'Content-Type': 'application/json'},
+      body: jsonEncode({
+        'prenom': prenom,
+        'nom': nom,
+        'email': email,
+        'password': password,
+      }),
+    );
+
+    if (response.statusCode != 201) {
+      final body = jsonDecode(response.body) as Map<String, dynamic>;
+      throw Exception(body['message'] ?? 'Inscription impossible');
+    }
+
+    return AppUser.fromJson(jsonDecode(response.body) as Map<String, dynamic>);
+  }
+
   Future<List<Product>> fetchProducts() async {
     final response = await _client.get(Uri.parse('$baseUrl/api/produits'));
 

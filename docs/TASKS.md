@@ -59,7 +59,7 @@
 
 ## 8. Bonus possibles
 
-- [ ] Recherche par titre.
-- [ ] Filtre par categorie.
-- [ ] Favoris persistants.
-- [ ] Route d'inscription.
+- [x] Recherche par titre.
+- [x] Filtre par categorie.
+- [x] Favoris persistants.
+- [x] Route d'inscription.
