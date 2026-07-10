@@ -15,6 +15,10 @@ class Product {
   final String categorie;
   final double prix;
 
+  String get formattedPrice {
+    return '${prix.toStringAsFixed(2).replaceAll('.', ',')} EUR';
+  }
+
   factory Product.fromJson(Map<String, dynamic> json) {
     return Product(
       id: json['id'] as int,

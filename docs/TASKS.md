@@ -45,17 +45,17 @@
 
 ## 6. Detail produit
 
-- [ ] Passer le produit selectionne a l'ecran detail.
-- [ ] Afficher image, titre, description, categorie et prix.
-- [ ] Soigner la mise en page Material 3.
+- [x] Passer le produit selectionne a l'ecran detail.
+- [x] Afficher image, titre, description, categorie et prix.
+- [x] Soigner la mise en page Material 3.
 
 ## 7. Finition et verification
 
-- [ ] Lancer les tests Flutter.
-- [ ] Tester l'app avec le serveur local.
-- [ ] Mettre a jour le README avec les identifiants de test.
-- [ ] Ajouter un court rapport dans `docs/`.
-- [ ] Preparer 3 a 5 captures d'ecran.
+- [x] Lancer les tests Flutter.
+- [x] Tester l'app avec le serveur local.
+- [x] Mettre a jour le README avec les identifiants de test.
+- [x] Ajouter un court rapport dans `docs/`.
+- [x] Preparer 3 a 5 captures d'ecran.
 
 ## 8. Bonus possibles
 
