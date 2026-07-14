@@ -2,21 +2,21 @@
   {
     "id": 1,
     "email": "sophie.martin@example.com",
-    "password": "azerty123",
+    "password": "demo-login",
     "nom": "Martin",
     "prenom": "Sophie"
   },
   {
     "id": 2,
     "email": "karim.benali@example.com",
-    "password": "motdepasse2",
+    "password": "demo-login",
     "nom": "Benali",
     "prenom": "Karim"
   },
   {
     "id": 3,
     "email": "danielnagoloum@gmail.com",
-    "password": "Dani.2000",
+    "password": "demo-login",
     "nom": "nago",
     "prenom": "daniel"
   }
